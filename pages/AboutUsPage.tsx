@@ -33,7 +33,7 @@ const AboutUsPage: React.FC = () => {
           <FadeIn delay={200}>
               <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 md:gap-12 items-center">
                   <div className="md:col-span-1">
-                      <img src="https://media.licdn.com/dms/image/v2/D5603AQE8QuPNnRlZgw/profile-displayphoto-shrink_800_800/B56ZeIfTRhHEAc-/0/1750341597637?e=1762387200&v=beta&t=FbLtt3SLW_2VKXkB-XKzafi2FoPobJ29e-GcQsNnlRA" alt="Devashish Jaiswal" className="rounded-full shadow-lg aspect-square object-cover" />
+                      <img src="/DP.png" alt="Devashish Jaiswal" className="rounded-full shadow-lg aspect-square object-cover border-4 border-brand-purple/30" />
                   </div>
                   <div className="md:col-span-2">
                       <h3 className="text-2xl font-bold text-white">Devashish Jaiswal</h3>
