@@ -1,0 +1,29 @@
+# Unii.club Robots.txt
+# https://unii.club/robots.txt
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow admin and private areas (if any in future)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://unii.club/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+User-agent: *
+Crawl-delay: 1

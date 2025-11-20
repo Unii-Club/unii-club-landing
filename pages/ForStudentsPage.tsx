@@ -49,7 +49,7 @@ const ForStudentsPage: React.FC = () => {
               Your Future Starts Today. Not After Graduation.
           </h2>
           <div className="mt-8 flex justify-center">
-              <Button variant="primary">Sign Up and Build Your Profile</Button>
+              <Button variant="primary" as="a" href="https://app.unii.club/register">Sign Up and Build Your Profile</Button>
           </div>
         </FadeIn>
       </div>
