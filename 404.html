@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting... | Unii.club</title>
+    <script>
+        // GitHub Pages SPA redirect solution
+        // This script takes the current URL and converts it to a query string
+        // which will be parsed by index.html to restore the correct route
+
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+
+            if (redirect && redirect !== location.href) {
+                history.replaceState(null, null, redirect);
+            } else {
+                // Store the path in sessionStorage so index.html can restore it
+                var path = window.location.pathname;
+                if (path && path !== '/') {
+                    sessionStorage.redirect = window.location.href;
+                }
+
+                // Redirect to index.html with the path as a query parameter
+                var pathSegments = window.location.pathname.slice(1).split('/');
+                var query = '?p=/' + pathSegments.join('/') + window.location.search;
+                window.location.href = '/' + query;
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div style="font-family: sans-serif; text-align: center; padding: 50px;">
+        <h1>Redirecting...</h1>
+        <p>Please wait while we redirect you to the correct page.</p>
+    </div>
+</body>
+</html>

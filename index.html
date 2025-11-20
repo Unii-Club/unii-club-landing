@@ -152,6 +152,29 @@
     }
     </script>
 
+    <!-- GitHub Pages SPA Routing Fix -->
+    <script>
+        // Restore the correct route after redirect from 404.html
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect !== location.href) {
+                history.replaceState(null, null, redirect);
+            }
+
+            // Handle query parameter redirect
+            var query = window.location.search;
+            if (query) {
+                var match = query.match(/[?&]p=(\/[^&]*)/);
+                if (match) {
+                    var path = match[1];
+                    history.replaceState(null, null, path);
+                }
+            }
+        })();
+    </script>
+
+
 <script type="importmap">
 {
   "imports": {
@@ -162,8 +185,8 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-BOXc-Uwb.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DUrPDhqF.css">
+  <script type="module" crossorigin src="/assets/index-CF_QwVl7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cx8qSye_.css">
 </head>
 <body class="text-gray-300 antialiased selection:bg-brand-purple selection:text-white">
     <div id="root"></div>
